@@ -26,17 +26,23 @@ class Employee(object):
 def main():
     print(".-"*55)
     print("*"*100)
+    print()
     emp = Employee("Sarvagya","Dubey",75000)
+    print()
     print(f"Accessing class    variable raise_amount : {Employee.raise_amount}")
-    print(f"Accessing instance variable raise_amount : {emp.raise_amount}") 
+    print(f"Accessing instance variable raise_amount : {emp.raise_amount} \n") 
     # It can be verified that the instance variable raise_amount defaults to the class variable raise_amount,
     # The value of this instance variable can be changed dynamically during the runtime.
+    print("************************************************")
+    print("EMPLOYEE DETAILS :                             *")
+    print("************************************************")
     print(f"Employee Name   : {emp.fullname()}")
     print(f"Email           : {emp.email}")
     print(f"Salary          : {emp.pay}")
     print("Applying raise on employee salary")
     raised = emp.apply_raise()
     print(f"Raised Salary   : {raised}")
-    print("*"*100)
+    print("************************************************")
+    #print("*"*100)
     print(".-"*55)
 
