@@ -24,23 +24,45 @@ class Employee(object): # object is the parent class of all classes in Python. E
 def main():
     print(".-"*55)
     print("*"*100)
-    print("Accessing the method fullname using the instance variable\n")
     emp = Employee("Sarvagya","Dubey",75000) # Note that the parameter self is not passed only the instance variables.
-    print(f"Employee Name   : {emp.fullname()}")
-    print(f"Email           : {emp.email}")
-    print(f"Salary          : {emp.pay}")
+    
+    # List of instance variables in an instances can be viewed using __dict__
+    print()
+    print("*"*100)
+    print()
+    print("Instance variables for the instance : ")
+    print(emp.__dict__)
+    print()
+    
+    
     # Instance variables can dynamically be added to the instance during runtime.
-    # For example, the emp instance has 4 variables first,last,pay and email, we can initialize a dynamic variable after creation of an instance as well.
+    # For example, the emp instance has 4 variables first,last,pay and email, 
+    # we can dynamically initialize a variable after creation of an instance as well.
+    
+    print("--------------------------------------------------------")
     print("Adding instance variable phone after instance creation .")
+    print("--------------------------------------------------------")
     emp.phone = "+919999999991"
-    print(f"Phone           : {emp.phone}")
+    print("Instance variables for the instance : ")
+    print(emp.__dict__)
+    print()
+    print("*"*100)
+    print("                   *")
+    print("EMPLOYEE DETAILS : *")
+    print("********************")
+    print(f"Employee Name    : {emp.fullname()}")
+    print(f"Email            : {emp.email}")
+    print(f"Salary           : {emp.pay}")
+    print(f"Phone            : {emp.phone}")
+    print()
     print("*"*100)
 
     # Invoking emp.fullname() is equivalent to internally calling the below snippet, where the class accesses the instance method and passes the instance to it
     # to the self parameter.
+    print()
     print("Accessing the method fullname using the Class Employee \n")
     emp = Employee("Sarvagya","Dubey",75000)
-    print(f"Employee Name : {Employee.fullname(emp)}")
+    print(f"Employee Name : {Employee.fullname(emp)} \n")
     print("*"*100)
     print(".-"*55)
 
