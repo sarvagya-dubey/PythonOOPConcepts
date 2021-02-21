@@ -1,7 +1,7 @@
 # PythonOOPConcepts
-# This repository contains basic examples illustrating concepts of Object Oriented programming with Python. 
-# You get to know how to the following:
-# (i)Creating a class in python, 
+### This repository contains basic examples illustrating concepts of Object Oriented programming with Python. 
+#### You get to know how to the following:
+#### (i)Creating a class in python, 
 # (ii)Initialize and instantiating class instances, 
 # (iii)Using class variables, 
 # (iv)Inheritance in Python, 
