@@ -2,7 +2,7 @@
 # and try to analyze the inheritence behaviour of the sub-class.
 
 import datetime
-
+#------------------------------------------------------------------------- PARENT CLASS EMPLOYEE -------------------------------------------------------------------
 class Employee(object):
     
     raise_amount = 1.15
@@ -26,9 +26,10 @@ class Employee(object):
         amount   : amount """
         
         cls.raise_amount = amount
-        
+           
+    
     def apply_raise(self):
-        self.pay = self.pay*self.raise_amount # Every class variable is accessed using the class name
+        self.pay = self.pay*Employee.raise_amount # Every class variable is accessed using the class name
         return self.pay
     
     @classmethod
@@ -42,6 +43,8 @@ class Employee(object):
         if day.weekday() == 5 or day.weekday() == 6:
             return False
         return True
+        
+#------------------------------------------------------------------ Child Class Developer --------------------------------------------------------------------------
 
 class Developer(Employee):
     
@@ -62,7 +65,7 @@ class Developer(Employee):
         first,last,pay,language = developer_string.split("-")
         return cls(first,last,int(pay),language) 
     
-    
+#-----------------------------------------------------------------    
         
 
 def main():
@@ -104,6 +107,9 @@ def main():
     print()
     print("Invoking the inherited static method \"is_weekday\" using child class instance")
     print(Developer.is_weekday(datetime.date.today()))
+    print("************************************************")
+    print()
+    
     print(".-"*55)
     print("*"*100)
     
