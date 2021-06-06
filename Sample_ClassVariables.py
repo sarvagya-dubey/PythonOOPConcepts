@@ -29,8 +29,15 @@ def main():
     print()
     emp = Employee("Sarvagya","Dubey",75000)
     print()
+    print("************************************************")
+    print("Printing the instance's __dict__ attribute \n") # We find that the attribute raise_amount is by default not present in the instance emp.
+    print(emp.__dict__) # Lists the attributes of the instance.
+    print("************************************************")
+    print("Printing the dir(instance) \n")
+    print(dir(emp)) # Lists the inherited attributes and methods of the instance, here we find that the instance can access the class variable raise_amount
     print(f"Accessing class    variable raise_amount : {Employee.raise_amount}")
-    print(f"Accessing instance variable raise_amount : {emp.raise_amount} \n") 
+    print(f"Accessing instance variable raise_amount : {emp.raise_amount} \n")
+    print("************************************************")
     # It can be verified that the instance variable raise_amount defaults to the class variable raise_amount,
     # The value of this instance variable can be changed dynamically during the runtime.
     print("************************************************")
