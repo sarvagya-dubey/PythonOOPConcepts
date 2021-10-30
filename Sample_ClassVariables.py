@@ -1,4 +1,4 @@
-# This example illustrates how to use class variables
+# This example illustrates how to use class variables.
 
 """ Class variables are variables that are shared between all instances of a class.
 While instance variables are unique to each instance of the class, class variables

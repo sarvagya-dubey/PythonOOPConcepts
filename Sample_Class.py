@@ -26,7 +26,7 @@ def main():
     print("*"*100)
     emp = Employee("Sarvagya","Dubey",75000) # Note that the parameter self is not passed only the instance variables.
     
-    # List of instance variables in an instances can be viewed using __dict__
+    # List of instance variables in an instance can be viewed using __dict__
     print()
     print("*"*100)
     print()
