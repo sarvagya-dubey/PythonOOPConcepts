@@ -65,7 +65,7 @@ def main():
     print(f"Employee Name : {Employee.fullname(emp)} \n")
     print("*"*100)
     print(".-"*55)
-
+main()
 """ Python is an interpreted language, still it has a bytecode compiler .
 # Upon running the script "python Sample_Class.py", the intepreter compiles the source code into bytecode(.pyc) and then the VM executes it line by line.
 # Also, unlike Java it is not necessary to compile programs using first using the python command, they can automatically be imported and executed.
